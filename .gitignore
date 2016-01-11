@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/src/client/bower_components
+.bowerrc
+.jshintrc
+.yo-rc.json
+.editorconfig
+.bowerrc.swp
+.gitattributes
+.jscsrc
