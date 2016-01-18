@@ -3,9 +3,8 @@
 
     angular
         .module('app', [
-            'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
-            'ui.router', 'LocalStorageModule', 'linkify', 'ngFileUpload',
-            'app.authentication', 'app.error', 'app.admin'
+            'ngAnimate', 'ui.router', 'ui.bootstrap', 'angularjs-dropdown-multiselect',
+            'app.authentication', 'app.error', 'app.admin', 'app.enums'
         ])
         // set a constant for the API we are connecting to
         .constant('API_CONFIG', {

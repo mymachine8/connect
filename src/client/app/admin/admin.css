@@ -1,0 +1,16 @@
+.bulk-add {
+	margin-left:5px;
+}
+
+ul#entities li {
+	cursor: pointer;
+}
+
+.nav-tabs > li {
+	cursor: pointer;
+}
+
+ul#entities>li.current {
+    border-right: 5px solid #668eb0;
+    background: #fdfdfd;
+}

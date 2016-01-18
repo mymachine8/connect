@@ -5,14 +5,20 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="app/app.css">
-    <link rel="stylesheet" href="app/authentication/login.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<!--<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css"></script>-->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></script>
+
+    <!--<link rel="stylesheet" href="app/app.css"> -->
+    <!--<link rel="stylesheet" href="app/authentication/login.css"> -->
+
+  <link href="app/app.css" rel="stylesheet" type="text/css" />
+  <link href="app/admin/admin.css" rel="stylesheet" type="text/css" />
+	<link href="app/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+	<link href="app/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="app/assets/css/icons.css" rel="stylesheet" type="text/css" />
     <!-- endbuild -->
   </head>
   <body ng-app="app">
@@ -24,43 +30,35 @@
     <body ng-cloak ng-class="bodyClasses">
     <div class="full-height" ui-view=""></div>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/ui/jquery-ui.custom.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/requirejs/require.js"></script>
+    <!--<script src="bower_components/requirejs/require.js"></script>-->
+    <!--<script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
-    <script src="bower_components/angular-linkify/angular-linkify.js"></script>
-    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
-    
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js"></script>
 
-    <!--<script src="bower_components/angular-dragula/angular-dragula.js"></script>-->
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script type="text/javascript" src="app/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="app/plugins/flot/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="app/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script type="text/javascript" src="app/plugins/flot/jquery.flot.resize.min.js"></script>
+    <script type="text/javascript" src="app/plugins/flot/jquery.flot.time.min.js"></script>
+    <script type="text/javascript" src="app/plugins/flot/jquery.flot.growraf.min.js"></script>
+
+    <script type="text/javascript" src="app/plugins/daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="app/plugins/daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="app/plugins/blockui/jquery.blockUI.min.js"></script>
+
+    <script type="text/javascript" src="app/assets/js/app.js"></script>
+    <script type="text/javascript" src="app/assets/js/plugins.js"></script>
+    <script type="text/javascript" src="app/assets/js/plugins.form-components.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="app/authentication/authentication.module.js"></script>
@@ -68,9 +66,16 @@
         <script src="app/authentication/login.controller.js"></script>
         <script src="app/admin/admin.module.js"></script>
         <script src="app/admin/admin.config.js"></script>
+        <script src="app/admin/admin.controller.js"></script>
         <script src="app/admin/dashboard.controller.js"></script>
+        <script src="app/admin/manage-students.controller.js"></script>
+        <script src="app/admin/manage-faculty.controller.js"></script>
+        <script src="app/admin/manage-departments.controller.js"></script>
         <script src="app/error/error.module.js"></script>
         <script src="app/error/error.config.js"></script>
+        <script src="app/plugins.form-components.js"></script>
+        <script src="app/plugins.js"></script>
+        <script src="app/enums.js"></script>
         <script src="app/app.module.js"></script>
         <script src="app/config.route.js"></script>
         <!-- endbuild -->

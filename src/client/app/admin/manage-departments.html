@@ -1,0 +1,49 @@
+  <div class="tabbable tabbable-custom tabbable-full-width" style="margin-top:10px">
+<uib-tabset>
+    <uib-tab heading="Manage Courses">
+    <div class="manage-courses-container" style="margin-top:10px">
+		     <div class="row">
+		          <div class="col-md-12">
+				      <div class="widget box">
+				                          <div class="widget-header">
+				                            <h4>Add Courses</h4>
+				                          </div>
+				                 <div class="widget-content">
+					                 <div class="form-group pull-left bulk-add">
+	                                  <label class="control-label">Department:</label>
+	                                    <select class="form-control">
+	                                      <option value="Computer Science & Engineering" selected="selected">Computer Science & Engineering</option>
+	                                      <option value="Electronics Engineering">Electronics Engineering</option>
+	                                    </select>
+	                                </div>
+	                                <div class="form-group pull-left bulk-add">
+	                                  <label class="control-label">Courses:</label>
+					 				<div ng-dropdown-multiselect="" options="vm.departmentsDropdownList" selected-model="vm.selectedDepartmentsList" events="vm.dropDownEvents" checkboxes="true" extra-settings="vm.dropDownSettings"></div>
+					 				</div>
+					 				<button type="button" ng-click="vm.addStudent()" class="btn btn-primary bulk-add pull-left" style="margin-top:23px;">Add Course</button>
+                                	<div class="clearfix"></div>
+				 				</div>
+				 				<!-- Got this dropdown from here http://dotansimha.github.io/angularjs-dropdown-multiselect !-->
+				 		</div>
+		 		</div>
+		 	</div>
+		 </div>
+    </uib-tab>
+    <uib-tab heading="Manage Departments">
+		  <div class="manage-departments-container" style="margin-top:10px">
+		     <div class="row">
+		          <div class="col-md-12">
+				      <div class="widget box">
+				                          <div class="widget-header">
+				                            <h4>Add Departments</h4>
+				                          </div>
+				                 <div class="widget-content">
+				 				<div ng-dropdown-multiselect="" options="vm.departmentsDropdownList" selected-model="vm.selectedDepartmentsList" events="vm.dropDownEvents" checkboxes="true" extra-settings="vm.dropDownSettings"></div>
+				 				</div>
+				 				<!-- Got this dropdown from here http://dotansimha.github.io/angularjs-dropdown-multiselect !-->
+				 		</div>
+		 		</div>
+		 	</div>
+		 </div>
+    </uib-tab>
+  

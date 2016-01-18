@@ -1,0 +1,57 @@
+<div>
+	<script>
+	jQuery(document).ready(function(){
+		"use strict";
+		Plugins.init(); // Init all plugins
+		FormComponents.init(); // Init all form-specific plugins
+	});
+	</script>
+	<script type="text/javascript" src="app/assets/js/custom.js"></script>
+	<script type="text/javascript" src="app/assets/js/demo/charts/chart_filled_blue.js"></script>
+	<!-- Header -->
+	<header class="header navbar navbar-fixed-top" role="banner">
+		<!-- Top Navigation Bar -->
+		<div class="container">
+
+			<!-- /Top Left Menu -->	
+
+			<!-- Top Right Menu -->
+			<ul class="nav navbar-nav navbar-right">
+				<!-- User Login Dropdown -->
+				<!-- /user login dropdown -->
+			</ul>
+			<!-- /Top Right Menu -->
+		</div>
+		<!-- /top navigation bar -->
+
+		<!--=== Project Switcher ===-->
+	</header> <!-- /.header -->
+
+	<div id="container" class="fixed-header">
+		<div id="sidebar" class="sidebar-fixed">
+			<div id="sidebar-content">
+				<!--=== Navigation ===-->
+				<ul id="entities">
+					<li ng-repeat="entity in vm.collegeEntities" ng-class="{current: $index == vm.currentTab}" ng-click="vm.manageCollegeEntity($index, entity.id)">
+						{{entity.name}}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /Sidebar -->
+
+		<div id="content">
+			<div class="container">
+				<!--=== Page Content ===-->
+				<!--=== Inline Tabs ===-->
+				<div class="row">
+					<div class="col-md-12" id="manage-entities-container" ui-view>
+					</div>
+				</div> <!-- /.row -->
+				<!-- /Page Content -->
+			</div>
+			<!-- /.container -->
+
+		</div>
+	</div>
+</div>
