@@ -1,0 +1,59 @@
+.global-nav {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    height: 46px;
+    position: relative;
+    width: 100%;
+}
+
+.global-nav-inner {
+    background: #fff;
+    height: 46px;
+}
+
+/* Classes which I wrote */
+
+#header-nav-actions > li.active>a {
+    height: 42px;
+}
+#header-nav-actions > li > a {
+    border-bottom: 5px solid #0084b4;
+    transition: all .15s ease-in-out;
+}
+.header-nav {
+    position: relative;
+    float:right;
+    margin-left: 10px;
+}
+
+.nav>li>a, .nav>li>button {
+    color: inherit;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    height: 46px;
+    line-height: 1;
+    padding: 0 14px 0 4px;
+  }
+
+.global-nav, .global-nav .well, .nav .active>a {
+    background: transparent;
+}
+
+.Icon {
+    background: transparent;
+    display: inline-block;
+    font-style: normal;
+    vertical-align: baseline;
+    position: relative;
+}
+
+/* It's a best practice to use font-family for icons for minimal bandwidth , below code is just a sample */
+
+.Icon:after, .Icon:before {
+    display: block;
+    font-family: "rosettaicons";
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
