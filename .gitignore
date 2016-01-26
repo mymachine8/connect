@@ -1,8 +1,8 @@
 /node_modules
 /dist
 /.tmp
-/public/app/.sass-cache
-/public/bower_components
+/client/app/.sass-cache
+/client/bower_components
 .bowerrc
 .jshintrc
 .yo-rc.json
@@ -10,3 +10,4 @@
 .bowerrc.swp
 .gitattributes
 .jscsrc
+/.idea
