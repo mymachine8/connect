@@ -1,13 +1,12 @@
 /node_modules
-/dist
-/.tmp
 /client/app/.sass-cache
 /client/bower_components
 .bowerrc
 .jshintrc
-.yo-rc.json
 .editorconfig
-.bowerrc.swp
 .gitattributes
 .jscsrc
 /.idea
+server/.idea
+client/.idea
+.idea

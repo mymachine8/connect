@@ -6,7 +6,6 @@
 
 const mongoose = require('mongoose');
 const wrap = require('co-express');
-const Article = mongoose.model('Article');
 
 /**
  * List items tagged with a tag

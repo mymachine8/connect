@@ -18,7 +18,16 @@
         ////////////////
 
         function loginClick() {
-            $state.go('student.portal');
-        }
+            vm.dataLoading = true;
+            AuthenticationService.Login(vm.username, vm.password, function (response) {
+                if (response.success) {
+                    AuthenticationService.SetCredentials(vm.username, vm.password);
+                    $state.go('student.portal');
+                } else {
+                    FlashService.Error(response.message);
+                    vm.dataLoading = false;
+                }
+            });
+        };
     }
 })();

@@ -10,8 +10,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const config = require('./config/config');
+const path = require('path');
 
-const models = join(__dirname, 'app/models');
+const models = join(__dirname, 'models');
+
+global.appRoot = path.resolve(__dirname);
 const port = process.env.PORT || 3000;
 const app = express();
 

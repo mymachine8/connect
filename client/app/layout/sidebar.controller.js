@@ -3,8 +3,8 @@
 
     angular
         .module('app.layout')
-        .controller('HeaderController', HeaderController);
-    function HeaderController($state) {
+        .controller('SidebarController', SidebarController);
+    function SidebarController($state) {
         var vm = this;
     }
 })();

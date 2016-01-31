@@ -21,10 +21,9 @@ const flash = require('connect-flash');
 const winston = require('winston');
 const helpers = require('view-helpers');
 const config = require('./config');
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 
 const env = process.env.NODE_ENV || 'development';
-
 /**
  * Expose
  */
@@ -37,7 +36,7 @@ module.exports = function (app, passport) {
   }));
 
   // Static files middleware
-  app.use(express.static(config.root + '/public'));
+  app.use(express.static(config.root + '/client'));
 
   // Use winston on production
   let log = 'dev';
@@ -62,7 +61,7 @@ module.exports = function (app, passport) {
 
   // set views path, template engine and default layout
   app.engine('html', swig.renderFile);
-  app.set('views', config.root + '/app/views');
+  app.set('views', config.root + '/client');
   app.set('view engine', 'html');
 
   // expose package.json to views

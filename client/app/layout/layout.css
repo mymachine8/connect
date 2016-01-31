@@ -10,15 +10,27 @@
     height: 46px;
 }
 
+#college_brand {
+    float:left;
+    width:350px;
+}
+
+.header-search {
+    float:left;
+}
+
 /* Classes which I wrote */
 
-#header-nav-actions > li.active>a {
-    height: 42px;
-}
-#header-nav-actions > li > a {
+#header-nav-actions > li.active > a {
+     border-bottom: 5px solid #003265; /* main theme color of the company */
+     transition: all .15s ease-in-out;
+ }
+
+#header-nav-actions > li > a:hover {
     border-bottom: 5px solid #0084b4;
     transition: all .15s ease-in-out;
 }
+
 .header-nav {
     position: relative;
     float:right;
@@ -35,8 +47,68 @@
     padding: 0 14px 0 4px;
   }
 
+#college_brand > a{
+    color: inherit;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    height: 46px;
+    margin-top: 17px;
+    line-height: 1;
+    padding: 0 14px 0 4px;
+}
+
 .global-nav, .global-nav .well, .nav .active>a {
     background: transparent;
+}
+
+.global-nav-inner .search-input {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    padding: 5px 27px 6px 12px;
+    font-size: 12px;
+    line-height: 1;
+    color: #292f33;
+    background-color: #F2F4F7; /*Gradient of theme color*/
+    border: 1px solid #e1e8ed; /* Theme color*/
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.global-nav-inner .search-icon {
+    position: absolute;
+    top: 3px;
+    right: -3px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.global-nav-inner .form-search {
+    float: left;
+    height: 33px;
+    margin: 7px 15px 0 0;
+    font-size: 12px;
+    width: 350px;
+}
+
+.global-nav-inner .search-icon .Icon {
+    color: #66757f;
+    font-size: 13px;
+    height: auto;
+    margin: 3px 0 0 0;
+    padding: 0;
+    width: auto;
+}
+
+.global-nav-inner .nav-search {
+    margin-top: 3px;
+    margin-left: 7px;
+    background-color: transparent;
 }
 
 .Icon {
@@ -45,6 +117,91 @@
     font-style: normal;
     vertical-align: baseline;
     position: relative;
+}
+
+
+.nav>li>a .text {
+    float: left;
+    margin-left: 3px;
+    margin-top: 17px;
+    padding: 0;
+}
+
+.sidebar {
+    top: 70px;
+    position: static;
+    width: 250px;
+}
+
+.sidebar h3 {
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    font-size: 15px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.pin-message-container {
+background-color: #a0cfff;
+}
+
+.pin-message-box {
+    padding: 12px 10px 12px 10px;
+}
+
+.pin-message-content {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+
+
+.pin-message .editor {
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.editor .doc {
+    -webkit-user-select: auto;
+    padding: 16px 16px 32px;
+    min-height: 100px;
+    background-color: #fff;
+    counter-reset: indent0 indent1 indent2 citation;
+}
+
+.editor {
+    white-space: pre-wrap;
+    outline: 0;
+    -moz-tab-size: 2em;
+    -o-tab-size: 2em;
+    tab-size: 2em;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 44px 0 0;
+    border: 1px solid #e2e2e2;
+    font-family: Georgia,Times,"Times New Roman",serif;
+}
+
+.pin-message-options {
+    float: left;
+    margin-top: 2px;
+}
+
+.pin-message .spinner {
+    background-image: url(../../img/t1/spinner-rosetta-gray-14x14.gif);
+    display: none;
+    height: 14px;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+    width: 14px;
 }
 
 /* It's a best practice to use font-family for icons for minimal bandwidth , below code is just a sample */
