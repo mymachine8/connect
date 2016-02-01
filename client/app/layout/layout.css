@@ -1,13 +1,9 @@
-.global-nav {
+.global-nav-inner {
     border-bottom: 1px solid rgba(0,0,0,0.15);
     height: 46px;
     position: relative;
-    width: 100%;
-}
-
-.global-nav-inner {
     background: #fff;
-    height: 46px;
+    width: 100%;
 }
 
 #college_brand {
@@ -130,7 +126,8 @@
 .sidebar {
     top: 70px;
     position: static;
-    width: 250px;
+    width: 180px;
+    float:left;
 }
 
 .sidebar h3 {
@@ -146,11 +143,12 @@
 }
 
 .pin-message-container {
-background-color: #a0cfff;
+    background-color: #a0cfff;
+    padding: 12px 10px 12px 10px;
 }
 
 .pin-message-box {
-    padding: 12px 10px 12px 10px;
+
 }
 
 .pin-message-content {
@@ -160,32 +158,21 @@ background-color: #a0cfff;
 
 
 
-.pin-message .editor {
+.pin-message-box .editor {
     border: 0;
     border-top: 1px solid #ddd;
+    margin-bottom:6px;
 }
 
-.editor .doc {
-    -webkit-user-select: auto;
-    padding: 16px 16px 32px;
-    min-height: 100px;
-    background-color: #fff;
-    counter-reset: indent0 indent1 indent2 citation;
-}
-
-.editor {
-    white-space: pre-wrap;
+.editor .messsage-input-box {
     outline: 0;
-    -moz-tab-size: 2em;
-    -o-tab-size: 2em;
-    tab-size: 2em;
     position: relative;
     box-sizing: border-box;
     font-size: 15px;
     width: 100%;
-    margin: 0 auto;
-    padding: 44px 0 0;
+    padding: 8px 10px;
     border: 1px solid #e2e2e2;
+    background-color: #fff;
     font-family: Georgia,Times,"Times New Roman",serif;
 }
 
@@ -203,6 +190,136 @@ background-color: #a0cfff;
     top: 2px;
     width: 14px;
 }
+
+.pin-message-box .editor .messsage-input-box {
+    max-height: none;
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+
+div[contenteditable="true"]:focus, div[contenteditable="true"].fake-focus {
+    outline: 0;
+    color: #292f33;
+    border-color: #56b4ef;
+}
+
+[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    display: block; /* For Firefox */
+}
+
+.pin-message-options {
+    float:left;
+}
+
+.pin-message-options .photo-selector {
+    float:left;
+}
+
+.pin-message-options .tag {
+    float:left;
+}
+
+.pin-button {
+    float: right;
+}
+.pin-button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: color ease-in-out 100ms,background-color ease-in-out 100ms,border-color ease-in-out 100ms;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(200,200,200,0.2);
+    display: inline-block;
+    font-weight: 500;
+    outline: 0;
+    padding: 3px 7px 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: #3e78ad;
+    color: #fff;
+    border: 1px solid #3a66ad;
+    box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
+}
+
+.camera-button, .tag-button {
+    background:none;
+    border:none;
+    box-shadow:none;
+    font-weight: 500;
+    color: #2b6dad;
+}
+
+.photo-selector, .tag {
+    float: left;
+}
+
+.media-container.is-square {
+    max-height: 506px;
+}
+
+.media-container {
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0 0 0;
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.media-container img{
+    width:100%;
+}
+
+.pin-btn {
+    background-color: #0084b4;
+    border: 1px solid transparent;
+    color: #fff;
+    display: block;
+    padding: 9px 16px 8px 17px;
+    text-align: center;
+}
+
+.feed-item-header .feed-item-user {
+    display: block;
+    line-height: 1.2em;
+    margin-bottom: 2px;
+}
+
+.feed-item-header .user-short-bio{
+    font-size: 13px;
+    color: #999;
+}
+
+.photo-tooltip {
+    float:left;
+}
+
+.photo-tooltip img{
+    border-radius:30px 30px 30px 30px;
+}
+
+.feed-item {
+    padding: 9px 12px;
+    border-radius: 6px 6px 6px 6px;
+    background: #fff;
+    border: 1px solid #e1e8ed;
+    background-clip: padding-box;
+}
+
+.feed-user-name,.short-bio{
+    padding-left:8px;
+}
+/*.btn-camera:hover, .btn-camera:focus, .btn-camera:active {*/
+    /*background: #33a6cc;*/
+    /*border: 2px solid #0099cc;*/
+/*}*/
 
 /* It's a best practice to use font-family for icons for minimal bandwidth , below code is just a sample */
 

@@ -1,42 +1,42 @@
 <div class="pin-message-container">
     <div class="pin-message-box">
         <div class="pin-message editor">
-            <div contenteditable="true" spellcheck="true" placeholder="Pin something on Board">
+            <div class="messsage-input-box" contenteditable="true" spellcheck="true" placeholder="Pin something on Board">
+            <div>Pin Something on Board</div>
             </div>
         </div>
         <div class="toolbar">
             <div class="pin-message-options">
-                <span class="TweetBox-mediaPicker">
-                    <div class="photo-selector">
-                        <button aria-hidden="true" class="btn icon-btn js-tooltip" type="button" tabindex="-1"
-                                data-original-title="Add photos or video">
-                            <span class="pin-camera Icon Icon--camera"></span>
-                        <span class="text add-photo-label">
-                            Media
+                <div class="photo-selector">
+                    <button class="btn btn-primary camera-button" data-toggle="tooltip"
+                            title="Add photos">
+                        <span class="glyphicon glyphicon-camera"></span>
+                        <span class="text tag-label">
+                            Photo
                         </span>
-                        </button>
-                    </div>
-                </span>
+                    </button>
+                </div>
                 <div class="tag">
-                    <button class="btn icon-btn js-tooltip" type="button" title="Tag"
-                            data-delay="150">
-                        <span class="Icon"></span>
+                    <button class="btn btn-primary tag-button"  title="Tag"
+                            data-toggle="tooltip">
+                        <span class="glyphicon glyphicon-camera"></span>
                         <span class="text tag-label">
                             Tag
                         </span>
                     </button>
                 </div>
             </div>
-            <div class="pin-button">
+            <div>
                 <span class="spinner"></span>
-                <button class="btn primary-btn" type="button">
-                  <span class="button-text">
-                    <span class="Icon Icon-something"></span>
-                    Tweet
+                <button class="btn btn-primary pin-button">
+                    <span class="glyphicon glyphicon-pushpin"></span>
+                   <span class="text tag-label">
+                    Pin
                   </span>
                 </button>
 
             </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>

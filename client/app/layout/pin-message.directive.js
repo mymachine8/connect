@@ -8,7 +8,7 @@
     'use strict';
     angular
         .module('app.layout')
-        .directive('pin-message', pinMessage);
+        .directive('pinMessage', pinMessage);
 
     function pinMessage() {
         return {
