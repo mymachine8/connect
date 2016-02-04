@@ -1,14 +1,27 @@
 .global-nav-inner {
     border-bottom: 1px solid rgba(0,0,0,0.15);
     height: 46px;
-    position: relative;
+    position: fixed;
     background: #fff;
     width: 100%;
+    z-index: 999;
 }
 
+.header-container {
+    width:1120px;
+}
 #college_brand {
     float:left;
     width:350px;
+}
+
+#college_brand img {
+    width:35px;
+    height:35px;
+}
+
+#college_brand a {
+    text-decoration: none !important;
 }
 
 .header-search {
@@ -49,7 +62,7 @@
     font-size: 15px;
     font-weight: 600;
     height: 46px;
-    margin-top: 17px;
+    margin-top:8px;
     line-height: 1;
     padding: 0 14px 0 4px;
 }
@@ -123,11 +136,19 @@
     padding: 0;
 }
 
+
 .sidebar {
-    top: 70px;
-    position: static;
-    width: 180px;
-    float:left;
+    width: 200px;
+    float: left;
+    min-height: 1px;
+    margin-left: 8px;
+    clear: left;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    padding: 15px;
+    line-height: 16px;
 }
 
 .sidebar h3 {
@@ -135,16 +156,44 @@
     font-weight: 500;
     position: relative;
     border-bottom: 1px solid #e2e2e2;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
     font-size: 15px;
     letter-spacing: 0;
     text-transform: none;
 }
 
+.sidebar-list-container a{
+    display:block;
+    text-decoration:none;
+    padding-left:4px;
+}
+
+.sidebar-list-container li {
+    padding:0 2px 2px 2px;
+}
+
+.sidebar-list-container a span{
+    margin-left:2px;
+}
+
+.sidebar-list-container li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+.sidebar-list-container li.active a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
 .pin-message-container {
-    background-color: #a0cfff;
+    background-color: #eef7ff;
     padding: 12px 10px 12px 10px;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid #e1e8ed;
 }
 
 .pin-message-box {
@@ -303,18 +352,64 @@ div[contenteditable="true"]:focus, div[contenteditable="true"].fake-focus {
 
 .photo-tooltip img{
     border-radius:30px 30px 30px 30px;
+    height:40px;
+    width:40px;
 }
 
 .feed-item {
     padding: 9px 12px;
     border-radius: 6px 6px 6px 6px;
+    margin-top:5px;
     background: #fff;
     border: 1px solid #e1e8ed;
     background-clip: padding-box;
 }
 
+p.feed-item-text{
+    margin-bottom:0;
+}
+
+.truncated-view {
+    padding-top: 10px;
+}
+/*.toolbar {*/
+    /*height: 25px;*/
+/*}*/
+
+.feed-user-name {
+    font-size:15px;
+}
 .feed-user-name,.short-bio{
     padding-left:8px;
+}
+
+.feed-item-text {
+    font-size: 14px;
+}
+
+
+.module {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    padding: 15px;
+    line-height: 16px;
+}
+
+.module-header h3{
+    margin-top:0;
+    margin-bottom:8px;
+}
+
+.college-name-inner {
+    display:block;
+}
+
+.college-name-inner .name {
+    font-size:13px;
+    font-weight:bold;
+    color: #292f33;
 }
 /*.btn-camera:hover, .btn-camera:focus, .btn-camera:active {*/
     /*background: #33a6cc;*/

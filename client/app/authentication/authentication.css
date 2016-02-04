@@ -50,9 +50,7 @@
 
 }
 .login .box .content {
-  padding: 30px;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding: 15px 15px 0 15px;
 }
 .login .box form {
   padding: 0;
@@ -179,6 +177,10 @@
 }
 .login .spacing-top {
   padding-top: 7px !important;
+}
+
+.hide-default {
+  display:none;
 }
 
 /*# sourceMappingURL=login.css.map */
