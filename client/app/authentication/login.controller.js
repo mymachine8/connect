@@ -28,7 +28,7 @@
                     vm.dataLoading = false;
                 }
             });*/
-            $state.go('student.portal');
+            $state.go('student.bulletin');
         };
     }
 })();

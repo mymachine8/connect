@@ -22,13 +22,14 @@
     "lodash": "~4.0.0",
     "angular-bootstrap": "~1.0.3",
     "bootstrap-material-design": "~0.5.7",
-    "angularjs-dropdown-multiselect": "~1.5.2"
+    "angularjs-dropdown-multiselect": "~1.5.2",
+    "angular-breadcrumb": "~0.4.1"
   },
   "appPath": "app",
   "moduleName": "connectApp",
   "resolutions": {
     "jquery": "~2.1.1",
-    "angular": "1.4.8",
+    "angular": "1.5.0",
     "lodash": "~4.0.0"
   }
 }

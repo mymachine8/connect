@@ -1,0 +1,219 @@
+.new-listing-container {
+    padding:25px;
+}
+
+.new-listing-container .submit {
+    margin-left:15px;
+    background:#31aae9;
+}
+.iuborder {
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    float: left;
+    padding: 20px 0 16px 20px;
+    margin-left: 15px;
+}
+
+.iuborder {
+    border: 1px dashed #d8d8d8 !important;
+    background-color: #f8f8f8 !important;
+    box-shadow: none !important;
+    border-radius: 3px;
+    width: 537px;
+}
+
+
+.dropzone.dz-clickable {
+    cursor: pointer;
+}
+.iudzdiv {
+    width: 539px;
+}
+
+
+.iudzdiv, .iudzdiv-cpap {
+    /* padding: 15px; */
+    background: #f0f0f0;
+    float: left;
+    border: 1px solid #e9e9e9;
+    position: relative;
+    min-height: 164px;
+}
+
+.dropzone {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: rgba(0,0,0,0.03);
+}
+
+.dropzone, .dropzone *, .dropzone-previews, .dropzone-previews * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dropzone {
+    background: none !important;
+}
+
+.iudzdiv, .iudzdiv-cpap {
+    background-color: none !important;
+    border: none !important;
+}
+
+.hide {
+    display: none;
+}
+
+.dzq-preview-panel {
+    width: 99%;
+    position: absolute;
+    margin-top: 70px;
+    height: 166px;
+}
+
+.dzq-preview-panel, .dzq-preview-panel-cpap {
+    float: left;
+    /* margin-bottom: 10px; */
+    /* width: 100%; */
+    height: 90px;
+}
+
+
+
+.dzq-img-wapp {
+    float: left;
+    margin: 6px 8px 5px 5px;
+    width: 110px;
+}
+
+.dzq-img-box {
+    /* background: url("/plugin/images/PAP.1234567891.png") no-repeat scroll 0 -531px rgba(0, 0, 0, 0); */
+    /* background: url("/images/sprite_pap_n_home.1418823129.png") no-repeat scroll 0 -531px rgba(0, 0, 0, 0); */
+    float: left;
+    height: 69px;
+    position: relative;
+    width: 110px;
+}
+
+.dzq-img-box {
+    background-color: #e8e8e8 !important;
+    border: 1px dashed #d8d8d8;
+}
+
+
+
+.dzq-img-box .addIcon {
+    font-size: 21px;
+    color: #757575;
+    border: 1px solid #767676;
+    border-radius: 50%;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 1px;
+    width: 24px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -12px 0 0 -12px;
+    text-align: center;
+}
+
+.dzq-button-panel {
+    float: left;
+    /* font-size: 19px; */
+    /* line-height: 35px; */
+    /* width: 100%; */
+    /* padding-left: 100px; */
+    /* bottom: 55px; */
+    /* position: absolute; */
+    font-size: 14px;
+    font-family: ProximaNova-Regular;
+    color: #1a222c;
+}
+
+.iu-grey-btn {
+    /* background: -moz-linear-gradient(center top , #E4E4E4 0px, #FFFFFF) repeat scroll 0 0 rgba(0, 0, 0, 0); */
+    color: #000000;
+    cursor: pointer;
+    font-family: ProximaNova-Regular;
+    width: 518px;
+}
+
+
+/*After Uploading Image,
+the container state css*/
+
+
+.dropzone .dz-preview, .dropzone-previews .dz-preview {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 117px;
+    top: -151px;
+    margin: -2px 6px 13px 7px;
+}
+
+.dropzone .dz-preview .dz-details, .dropzone-previews .dz-preview .dz-details {
+    position: relative;
+    width: 117px;
+    height: 69px;
+    overflow: hidden;
+    padding: 2px;
+    cursor: move;
+}
+
+.dropzone .dz-preview .dz-details img, .dropzone-previews .dz-preview .dz-details img {
+    /* border: 2px solid #FFFFFF; */
+    /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); */
+    height: 63px;
+    position: absolute;
+    width: 111px;
+    z-index: 2;
+    background: #e8e8e8;
+}
+
+/*progress bar*/
+.dropzone .dz-preview.dz-processing .dz-progress, .dropzone-previews .dz-preview.dz-processing .dz-progress {
+    display: block;
+    margin-top: 13px;
+}
+
+.dropzone .dz-preview .dz-progress, .dropzone-previews .dz-preview .dz-progress {
+    position: absolute;
+    top: 45px;
+    left: 2px;
+    right: 6px;
+    height: 6px;
+    background: #d7d7d7;
+    display: none;
+    z-index: 5;
+}
+
+.dropzone .dz-preview .dz-progress .dz-upload, .dropzone-previews .dz-preview .dz-progress .dz-upload {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: #8cc657;
+}
+
+.img_close_icon {
+    z-index: 5;
+    position: absolute;
+    top: -12px;
+    border-radius: 50%;
+    border: 0px;
+    background-color: #717171;
+    color: #f3f3f3;
+    height: 19px;
+    width: 19px;
+    right: -7px;
+    line-height: 0px;
+    text-align: center;
+    padding-top: 10.4px;
+    font-size: 15px;
+}

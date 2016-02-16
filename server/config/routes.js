@@ -1,71 +1,83 @@
 'use strict';
 
-/*!
- * Module dependencies.
- */
+const jwt = require('express-jwt');
+var apiController = require('../controllers');
+var cors = require('cors');
+module.exports = function (app) {
 
-// Note: We can require users, articles and other cotrollers because we have
-// set the NODE_PATH to be ./app/controllers (package.json # scripts # start)
 
-const users = require('../controllers/users');
-const comments = require('../controllers/comments');
-const tags = require('../controllers/tags');
-const auth = require('./middlewares/authorization');
+    // CORS options
+  //  var whitelist = [config.frontendUrl];
+    var corsOptions = {
+        credentials: true,
+        origin: function (origin, callback) {
+           // var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
+            //callback(null, originIsWhitelisted); //uncomment to allow particular origins only
+            callback(null, true); //uncomment this and comment the above to allow all
+        }
+    };
 
-/**
- * Route middlewares
- */
+    //app.use(cors(corsOptions)); //Enable CORS
+    //app.options('*', cors(corsOptions)); // Enable CORS Pre-Flight
 
-const articleAuth = [auth.requiresLogin, auth.article.hasAuthorization];
-const commentAuth = [auth.requiresLogin, auth.comment.hasAuthorization];
-
-/**
- * Expose routes
- */
-
-module.exports = function (app, passport) {
-
-  // user routes
-  app.get('/api/login', users.login);
-  app.get('/api/signup', users.signup);
-  app.get('/api/logout', users.logout);
-  app.post('/api/users', users.create);
-  app.post('/api/users/session',
-    passport.authenticate('local', {
-      failureRedirect: '/login',
-      failureFlash: 'Invalid email or password.'
-    }), users.session);
-  app.get('/api/users/:userId', users.show);
-
-    // application -------------------------------------------------------------
-  app.get('/', function(req, res) {
-      res.sendfile(config.root + '/client/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-  });
-
-  app.use(function (err, req, res, next) {
-    // treat as 404
-    if (err.message
-      && (~err.message.indexOf('not found')
-      || (~err.message.indexOf('Cast to ObjectId failed')))) {
-      return next();
-    }
-
-    console.error(err.stack);
-
-    if (err.stack.includes('ValidationError')) {
-      res.status(422).render('422', { error: err.stack });
-      return;
-    }
-
-    // error page
-    res.status(500).render('500', { error: err.stack });
-  });
-
-  // assume 404 since no middleware responded
-  app.use(function (req, res) {
-    res.status(404).render('404', {
-      url: req.originalUrl,
-      error: 'Not found'
+    app.use(function (req, res, next) {
+        var routes = ['/api/login','/api/register','/','/app'];
+        if (routes.indexOf(req.url) != -1 || '/api'.indexOf(req.url)== -1) {
+            next();
+        } else {
+            jwt({secret: 'server secret'})(req, res, function(err,req,res){
+                if (err.name === 'UnauthorizedError') {
+                    res.status(401).send({status: 'error', message: 'Not a valid Token'});
+                } else {
+                    res.status(412).send({status: 'error', message: 'Not a valid Token'});
+                }
+            });
+        }
     });
-  });
+
+    // user routes
+    app.use('/api', apiController);
+
+    // application route(index.html)
+    app.get('/', function (req, res) {
+        res.sendfile(appRoot + '/client/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+    });
+
+    app.get('*', function (req, res) {
+        res.sendfile(appRoot+ '/client/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+    });
+
+    //app.get('/app/:name', function(req,res) {
+    //    var name = req.params.name;
+    //    res.sendfile(appRoot + '/client/app/' + name);
+    //});
+
+    //  Error Route Handling
+
+    app.use(function (err, req, res, next) {
+        // treat as 404
+        if (err.message
+            && (~err.message.indexOf('not found')
+            || (~err.message.indexOf('Cast to ObjectId failed')))) {
+            return next();
+        }
+
+        console.error(err.stack);
+
+        if (err.stack.includes('ValidationError')) {
+            res.status(422).render('422', {error: err.stack});
+            return;
+        }
+
+        // error page
+        res.status(500).render('500', {error: err.stack});
+    });
+
+    // assume 404 since no middleware responded
+    app.use(function (req, res) {
+        res.status(404).render('404', {
+            url: req.originalUrl,
+            error: 'Not found'
+        });
+    });
 };

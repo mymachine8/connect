@@ -58,6 +58,8 @@
   "dependencies": {
     "assetmanager": "latest",
     "async": "latest",
+    "bcrypt": "^0.8.5",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "latest",
     "bower": "latest",
     "co-express": "^1.2.1",
@@ -67,9 +69,12 @@
     "connect-mongo": "^1.1.0",
     "consolidate": "latest",
     "cookie-parser": "latest",
+    "cookie-session": "latest",
+    "cors": "^2.7.1",
     "csurf": "latest",
     "errorhandler": "latest",
     "express": "latest",
+    "express-jwt": "latest",
     "express-session": "latest",
     "forever": "latest",
     "gridfs-stream": "latest",
@@ -97,7 +102,6 @@
     "shelljs": "latest",
     "swig": "latest",
     "view-helpers": "latest",
-    "cookie-session": "latest",
     "winston": "latest"
   },
   "engines": {

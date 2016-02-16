@@ -1,0 +1,115 @@
+<div class="new-listing-container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Create New Listing</div>
+        <div class="panel-body">
+            <form class="form-horizontal new-listing" ng-submit="vm.submitNewListing()">
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Category</label>
+                    <div class="col-md-4">
+                        <select name="category-group" id="category-group" class="form-control">
+                            <option value="0" selected="selected"> Select a category...</option>
+                            <option value="Books">Books</option>
+                            <option value="Other"> Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Publish to</label>
+                    <div class="col-md-8">
+                        <label class="radio-inline" for="radios-0">
+                            <input name="radios" id="radios-0" checked="checked" type="radio">
+                            Only my College </label>
+                        <label class="radio-inline" for="radios-1">
+                            <input name="radios" id="radios-1" type="radio">
+                            All Colleges in Vizag </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="Adtitle">Ad title</label>
+                    <div class="col-md-8">
+                        <input id="Adtitle" name="Adtitle" placeholder="Ad title" class="form-control input-md"
+                               required="" type="text">
+                        <span class="help-block">A great title needs at least 60 characters. </span></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="textarea">Describe ad </label>
+                    <div class="col-md-8">
+                            <textarea class="form-control" id="textarea"
+                                      name="textarea">Describe your listing</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="Price">Price</label>
+                    <div class="col-md-4">
+                        <div class="input-group"><span class="input-group-addon">$</span>
+                            <input id="Price" name="Price" class="form-control" placeholder="(optional)"
+                                   required="" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">
+                                Negotiable </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="seller-Number">Phone Number</label>
+                    <div class="col-md-4">
+                        <input id="seller-Number" name="seller-Number" placeholder="Phone Number"
+                               class="form-control input-md" required="" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-3">
+                        <div class="iuborder">
+
+                            <div id="addPhoto" class="dropzone dz-clickable">
+
+
+                                <div class="dzq-button-panel dzq-p100 dz-clickable" style="">
+                                    <div class="iu-grey-btn">
+                                        <div class="spritepay upload-icon"></div>
+                                        <h5>Select Files to Upload / Drag and Drop Files</h5>
+                                    </div>
+                                    <div class="dzq-img-wapp">
+                                        <div class="dzq-img-box">
+												<span id="firstImgBox" class="addIcon">+<span>
+											</span></span></div>
+                                    </div>
+                                    <div class="dzq-img-wapp">
+                                        <div class="dzq-img-box">
+												<span class="addIcon">+<span>
+											</span></span></div>
+                                    </div>
+                                    <div class="dzq-img-wapp">
+                                        <div class="dzq-img-box">
+												<span class="addIcon">+<span>
+											</span></span></div>
+                                    </div>
+                                    <div class="dzq-img-wapp">
+                                        <div class="dzq-img-box">
+												<span class="addIcon">+<span>
+											</span></span></div>
+                                    </div>
+                                </div>
+
+                            </div><!-- id='addPhoto' class='dropzone dz-clickable iudzdiv' -->
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-offset-3">
+                    <button type="submit" id="submit-listing" class="btn btn-default submit">Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

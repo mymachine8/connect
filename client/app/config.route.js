@@ -6,11 +6,11 @@
         .config(routeConfig);
 
     /* @ngInject */
-    function routeConfig($stateProvider, $urlRouterProvider) {
+    function routeConfig($urlRouterProvider, $locationProvider) {
         // Setup the apps routes
-        
+        $locationProvider.html5Mode(true);
+        $locationProvider.hashPrefix = '!';
         // set default routes when no path specified
-        $urlRouterProvider.when('', '/login');
         $urlRouterProvider.when('/', '/login');
 
         // always goto 404 if route not found

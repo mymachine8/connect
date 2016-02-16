@@ -14,7 +14,7 @@ const path = require('path');
 
 const models = join(__dirname, 'models');
 
-global.appRoot = path.resolve(__dirname);
+global.appRoot = config.root;
 const port = process.env.PORT || 3000;
 const app = express();
 
@@ -24,7 +24,7 @@ const app = express();
 
 module.exports = app;
 
-// Bootstrap models
+// Bootstrap models (so that we can call mongoose.model('modelname') instead of require('modelname') to load models
 fs.readdirSync(models)
   .filter(file => ~file.indexOf('.js'))
   .forEach(file => require(join(models, file)));

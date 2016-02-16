@@ -65,6 +65,12 @@ a {
   text-transform: none;
 }
 
+.main-content {
+  width:880px;
+    float:left;
+}
+
+
 .clear {
   clear: both;
 }

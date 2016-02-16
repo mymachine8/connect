@@ -7,7 +7,6 @@
 
     /* @ngInject */
     function moduleConfig($stateProvider) {
-
         $stateProvider
         .state('student', {
             abstract: true,
@@ -21,12 +20,5 @@
             controller: 'PortalController',
             controllerAs: 'vm'
         })
-        .state('student.bulletin', {
-            url: '/bulletin',
-            templateUrl: 'app/student/bulletin-board.html',
-            controller: 'BulletinBoardController',
-            controllerAs: 'vm'
-        });
-
     }
 })();

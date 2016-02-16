@@ -107,7 +107,7 @@ module.exports = function (app, passport) {
   // should be declared after session and flash
   app.use(helpers(pkg.name));
 
-  if (env !== 'test') {
+  if (env !== 'test' && env !== 'development') {
     app.use(csrf());
 
     // This could be moved to view-helpers :-)

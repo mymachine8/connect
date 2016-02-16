@@ -6,7 +6,4 @@
 .editorconfig
 .gitattributes
 .jscsrc
-/.idea
-server/.idea
-client/.idea
 .idea
